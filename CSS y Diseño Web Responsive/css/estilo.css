@@ -1,0 +1,395 @@
+@font-face {
+	font-family: "DacingScript";
+	src: url(../fuentes/DancingScript.otf);
+}
+
+body {
+	background-color: black;
+}
+
+@media (max-width:899px) {
+	header #contenido {
+		width: 100%;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	#imagen_central {
+		width: 90%;
+		height: 300px;
+		margin-left: 5%;
+		margin-top: 10px;
+		margin-bottom: 10px;*/
+	}
+
+	#divImgSecundaria {
+		flex-flow: column;
+	}
+
+	#img_bloque_1 {
+		width: 90%;
+		order: 1;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_2 {
+		width: 90%;
+		order: 2;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	footer {
+		flex-flow: column;
+		width: 100%;
+	}
+
+	#block_contacto {
+		margin-left: 30px;
+	}
+
+	#block_terminos {
+		margin-left: 30px;
+	}
+
+	#block_redes_sociales {
+		margin-left: 30px;
+	}
+
+	#block_derechos {
+		margin-left: 30px;	
+	}
+
+
+	#divImgPrimera {
+		flex-flow: column;		
+	}
+
+	#divImgSegunda {
+		flex-flow: column;
+	}
+
+	#img_bloque_paisaje_1 {
+		width: 90%;
+		order: 1;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;	
+	}
+
+	#img_bloque_paisaje_2 {
+		width: 90%;
+		order: 2;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_3 {
+		width: 90%;
+		order: 3;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_4 {
+		width: 90%;
+		order: 4;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_5 {
+		width: 90%;
+		order: 5;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_6 {
+		width: 90%;
+		order: 6;
+		margin-left: 5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width:900px) {
+	#contenedor {
+		width: 50%;
+		margin-left: 25%;
+	}
+
+	header {
+		width: 900px;
+		position: fixed;
+		top: 0;
+	}
+
+	footer {
+		width: 900px;
+	}
+
+	#contenido {
+		width: 900px;
+	}
+
+	#imagen_central {
+		width: 80%;
+		height: 300px;
+		margin-left: 10%;
+		margin-top: 90px;
+		margin-bottom: 30px;
+	}
+
+	#divImgSecundaria {
+		flex-flow: row;
+	}
+
+	#img_bloque_1 {
+		width: 40%;
+		order: 1;
+		margin-left: 2.5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+	}
+
+	#img_bloque_2 {
+		width: 40%;
+		order: 2;
+		margin-left: 2.5%;
+		height: 250px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#block_contacto {
+		margin-left: 30px;
+	}
+
+	#block_terminos {
+		margin-left: 50px;
+	}
+
+	#block_redes_sociales {
+		margin-left: 50px;
+	}
+
+	#block_derechos {
+		margin-left: 50px;	
+	}
+
+
+	#divImgPrimera {
+		flex-flow: row;
+		margin-top: 59px;
+	}
+
+	#divImgSegunda {
+		flex-flow: row;
+		margin-top: 20px;
+	}
+
+
+	#img_bloque_paisaje_1 {
+		width: 25%;
+		order: 1;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;	
+	}
+
+	#img_bloque_paisaje_2 {
+		width: 25%;
+		order: 2;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_3 {
+		width: 25%;
+		order: 3;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_4 {
+		width: 25%;
+		order: 4;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_5 {
+		width: 25%;
+		order: 5;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#img_bloque_paisaje_6 {
+		width: 25%;
+		order: 6;
+		margin-left: 5%;
+		/*height: 250px;*/
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+header {
+	background-color: #5b7989;
+	color: white;
+	text-shadow: 2px 2px 2px #02010a;
+	border-radius: 10px 10px 0px 0px;
+	font-family: "DacingScript";
+	animation: animacion_header 3s;
+}
+
+header h1 {
+	margin: 10px 20px;
+	float: left;
+}
+
+nav {
+	height: 100%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+}
+
+li {
+	float: right;
+	display: block;
+	margin: 0px 5px;
+	padding: 15px 10px 10px 10px;
+	height: 100%;
+}
+
+li a {
+	color: white;
+}
+
+li a:hover {
+	text-decoration: none; 
+}
+
+.active {
+	text-decoration: none; 	
+}
+
+#divImgCentral {
+	background-color: #82c3a6;
+}
+
+#divImgSecundaria {
+	display: flex;
+	background-color: #d5c75f;
+}
+
+#img_bloque_1 {
+	border: 1px solid;
+}
+
+#img_bloque_2 {
+	border: 1px solid;
+}
+
+#img_bloque_1:hover {
+	transform: rotate(10deg);
+	text-shadow: 2px 2px 2px #82c3a6;
+	border: 2px solid;
+}
+
+#img_bloque_2:hover {
+	transform: translate(-5px, 20px);
+	text-shadow: 2px 2px 2px #82c3a6;
+	border: 2px solid;
+}
+
+#para_color {
+	background-color: #d5c75f;
+}
+
+#divImgPrimera {
+	display: flex;
+}
+
+#divImgSegunda {
+	display: flex;
+}
+
+#id_imagen_paisaje_1 {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#id_imagen_paisaje_3 {
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+.escala_grises {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.tamano_imagen {
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	background-color:  #C6d5c5;
+	clear: both;
+	min-height: 100px;
+	border-radius: 0px 0px 10px 10px;
+	font-family: "DacingScript";
+	display: flex;
+}
+
+@-webkit-keyframes animacion_header {
+	0% {
+		margin-top: 150%;
+	}
+	60% {
+		margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
