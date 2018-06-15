@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego de Damas Clásico</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<style type="text/css">
+		#tablero {
+			width: 800px;
+			height: 800px;
+			border: 2px solid black;
+		}
+
+		.row {
+			width: 100%
+		}
+
+		.cuadro {
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+
+		.cuadro_oscuro {
+			background-color: #61380B;
+		}
+
+		.cuadro_claro {
+			background-color: #B45F04;
+		}
+	</style>
+</head>
+<body>
+	<div id="tablero">
+		<div class="row">
+			<div id="cuadro1" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro2" class="cuadro cuadro_claro"></div>
+			<div id="cuadro3" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro4" class="cuadro cuadro_claro"></div>
+			<div id="cuadro5" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro6" class="cuadro cuadro_claro"></div>
+			<div id="cuadro7" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro8" class="cuadro cuadro_claro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro9" class="cuadro cuadro_claro"></div>
+			<div id="cuadro10" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro11" class="cuadro cuadro_claro"></div>
+			<div id="cuadro12" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro13" class="cuadro cuadro_claro"></div>
+			<div id="cuadro14" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro15" class="cuadro cuadro_claro"></div>
+			<div id="cuadro16" class="cuadro cuadro_oscuro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro17" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro18" class="cuadro cuadro_claro"></div>
+			<div id="cuadro19" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro20" class="cuadro cuadro_claro"></div>
+			<div id="cuadro21" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro22" class="cuadro cuadro_claro"></div>
+			<div id="cuadro23" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro24" class="cuadro cuadro_claro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro25" class="cuadro cuadro_claro"></div>
+			<div id="cuadro26" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro27" class="cuadro cuadro_claro"></div>
+			<div id="cuadro28" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro29" class="cuadro cuadro_claro"></div>
+			<div id="cuadro30" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro31" class="cuadro cuadro_claro"></div>
+			<div id="cuadro32" class="cuadro cuadro_oscuro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro33" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro34" class="cuadro cuadro_claro"></div>
+			<div id="cuadro35" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro36" class="cuadro cuadro_claro"></div>
+			<div id="cuadro37" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro38" class="cuadro cuadro_claro"></div>
+			<div id="cuadro39" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro40" class="cuadro cuadro_claro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro41" class="cuadro cuadro_claro"></div>
+			<div id="cuadro42" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro43" class="cuadro cuadro_claro"></div>
+			<div id="cuadro44" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro45" class="cuadro cuadro_claro"></div>
+			<div id="cuadro46" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro47" class="cuadro cuadro_claro"></div>
+			<div id="cuadro48" class="cuadro cuadro_oscuro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro49" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro50" class="cuadro cuadro_claro"></div>
+			<div id="cuadro51" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro52" class="cuadro cuadro_claro"></div>
+			<div id="cuadro53" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro54" class="cuadro cuadro_claro"></div>
+			<div id="cuadro55" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro56" class="cuadro cuadro_claro"></div>
+		</div>
+
+		<div class="row">
+			<div id="cuadro57" class="cuadro cuadro_claro"></div>
+			<div id="cuadro58" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro59" class="cuadro cuadro_claro"></div>
+			<div id="cuadro60" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro61" class="cuadro cuadro_claro"></div>
+			<div id="cuadro62" class="cuadro cuadro_oscuro"></div>
+			<div id="cuadro63" class="cuadro cuadro_claro"></div>
+			<div id="cuadro64" class="cuadro cuadro_oscuro"></div>
+		</div>
+	</div>
+</body>
+</html>
