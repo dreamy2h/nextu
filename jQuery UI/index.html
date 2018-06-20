@@ -9,9 +9,10 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#pieza1_jugador1").draggable({
-				revert: "invalid",
+				// revert: "invalid",
 			    start: function(evt, ui){
 			        startPos = ui.helper.position();
+			        console.warn(startPos);
 			    }
 			});
 			$("#pieza2_jugador1").droppable({
