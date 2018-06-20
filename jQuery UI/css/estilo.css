@@ -1,0 +1,43 @@
+#tablero {
+	width: 800px;
+	height: 800px;
+	border: 2px solid black;
+}
+
+.row {
+	width: 100%
+}
+
+.cuadro {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.cuadro_oscuro {
+	background-color: #61380B;
+}
+
+.cuadro_claro {
+	background-color: #B45F04;
+}
+
+.piezas1 {
+	border-radius: 50%;
+	border: 1px solid black;
+	width: 70px;
+	height: 70px;
+	margin-left: 15px;
+	margin-top: 15px;
+	background-color: red;
+}
+
+.piezas2 {
+	border-radius: 50%;
+	border: 1px solid black;
+	width: 70px;
+	height: 70px;
+	margin-left: 15px;
+	margin-top: 15px;
+	background-color: black;
+}

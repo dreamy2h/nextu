@@ -6,56 +6,26 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
-	<style type="text/css">
-		#tablero {
-			width: 800px;
-			height: 800px;
-			border: 2px solid black;
-		}
-
-		.row {
-			width: 100%
-		}
-
-		.cuadro {
-			width: 100px;
-			height: 100px;
-			float: left;
-		}
-
-		.cuadro_oscuro {
-			background-color: #61380B;
-		}
-
-		.cuadro_claro {
-			background-color: #B45F04;
-		}
-
-		.piezas1 {
-			border-radius: 50%;
-			border: 1px solid black;
-			width: 70px;
-			height: 70px;
-			margin-left: 15px;
-			margin-top: 15px;
-			background-color: red;
-		}
-
-		.piezas2 {
-			border-radius: 50%;
-			border: 1px solid black;
-			width: 70px;
-			height: 70px;
-			margin-left: 15px;
-			margin-top: 15px;
-			background-color: black;
-		}
-	</style>
-
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#pieza1_jugador1").draggable();
+			$("#pieza1_jugador1").draggable({
+				revert: "invalid",
+			    start: function(evt, ui){
+			        startPos = ui.helper.position();
+			    }
+			});
+			$("#pieza2_jugador1").droppable({
+				accept:"#pieza1_jugador1", 
+				tolerance:"fit", 
+				drop:devuelve_div
+			});
 		});
+
+		function devuelve_div(evt, ui) {
+			var x = startPos.left;
+        	var y = startPos.top;
+        	alert(x+' '+y);
+		}
 	</script>
 </head>
 <body>
@@ -64,15 +34,21 @@
 			<div id="cuadro1" class="cuadro cuadro_oscuro">
 				<div id="pieza1_jugador1" class="piezas1"></div>
 			</div>
+			
 			<div id="cuadro2" class="cuadro cuadro_claro"></div>
+			
 			<div id="cuadro3" class="cuadro cuadro_oscuro">
 				<div id="pieza2_jugador1" class="piezas1"></div>
 			</div>
+			
 			<div id="cuadro4" class="cuadro cuadro_claro"></div>
+			
 			<div id="cuadro5" class="cuadro cuadro_oscuro">
 				<div id="pieza3_jugador1" class="piezas1"></div>
 			</div>
+			
 			<div id="cuadro6" class="cuadro cuadro_claro"></div>
+			
 			<div id="cuadro7" class="cuadro cuadro_oscuro">
 				<div id="pieza4_jugador1" class="piezas1"></div>
 			</div>
