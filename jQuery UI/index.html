@@ -8,25 +8,9 @@
 	<script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#pieza1_jugador1").draggable({
-				// revert: "invalid",
-			    start: function(evt, ui){
-			        startPos = ui.helper.position();
-			        console.warn(startPos);
-			    }
-			});
-			$("#pieza2_jugador1").droppable({
-				accept:"#pieza1_jugador1", 
-				tolerance:"fit", 
-				drop:devuelve_div
-			});
-		});
+			$(".piezas1").draggable({ revert: "invalid" });
 
-		function devuelve_div(evt, ui) {
-			var x = startPos.left;
-        	var y = startPos.top;
-        	alert(x+' '+y);
-		}
+		});
 	</script>
 </head>
 <body>
