@@ -1,11 +1,11 @@
 #tablero {
-	width: 800px;
-	height: 800px;
-	border: 2px solid black;
+	position: absolute;
+	left: 35%;
+	border: 1px solid;
 }
 
 .row {
-	width: 100%
+	display: inline-block;
 }
 
 .cuadro {
@@ -15,11 +15,17 @@
 }
 
 .cuadro_oscuro {
-	background-color: #61380B;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: black;
 }
 
 .cuadro_claro {
-	background-color: #B45F04;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: white;
 }
 
 .piezas1 {
