@@ -8,12 +8,6 @@
 	display: inline-block;
 }
 
-.cuadro {
-	width: 100px;
-	height: 100px;
-	float: left;
-}
-
 .cuadro_oscuro {
 	display: inline-block;
 	width: 50px;
@@ -29,21 +23,27 @@
 }
 
 .piezas1 {
-	border-radius: 50%;
-	border: 1px solid black;
-	width: 70px;
-	height: 70px;
-	margin-left: 15px;
-	margin-top: 15px;
+	position: absolute;
+	width: 35px;
+	height: 35px;
 	background-color: red;
+	margin-top: 10px;
+  	margin-left: 6px;
+  	border-radius: 25px;
+  	-webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
 }
 
 .piezas2 {
-	border-radius: 50%;
-	border: 1px solid black;
-	width: 70px;
-	height: 70px;
-	margin-left: 15px;
-	margin-top: 15px;
-	background-color: black;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: blue;
+	margin-top: 10px;
+  	margin-left: 6px;
+  	border-radius: 25px;
+  	-webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
 }
