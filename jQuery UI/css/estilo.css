@@ -1,0 +1,49 @@
+#tablero {
+	position: absolute;
+	left: 35%;
+	border: 1px solid;
+}
+
+.row {
+	display: inline-block;
+}
+
+.cuadro_oscuro {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: black;
+}
+
+.cuadro_claro {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+}
+
+.piezas1 {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: red;
+	margin-top: 10px;
+  	margin-left: 6px;
+  	border-radius: 25px;
+  	-webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+}
+
+.piezas2 {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: blue;
+	margin-top: 10px;
+  	margin-left: 6px;
+  	border-radius: 25px;
+  	-webkit-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 16px 0px rgba(0,0,0,0.75);
+}
