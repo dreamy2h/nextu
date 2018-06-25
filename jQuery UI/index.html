@@ -13,18 +13,21 @@
 			var col = parseInt($("#" + identificador).attr("data-col"));
 			var row_previus = parseInt(ui.draggable.parent().attr("id").substr(4, 1));
 			var col_previus = parseInt(ui.draggable.parent().attr("id").substr(10, 1));
-			console.warn(row + ", " + col);
+
 			$(ui.draggable).appendTo($("#" + identificador));
+
 			if(ui.draggable.hasClass("piezas1")) {
 				if((row - 2) == row_previus) {
 					col_ = (col_previus > col) ? col_previus - 1 : col_previus + 1;
 					div_id = 'row_' + (row - 1) + "_col_" + col_;
+					console.warn("div_id1: " + div_id);
 					$("#" + div_id).empty();
 				}
 			} else {
 				if((row + 2) == row_previus) {
 					col_ = (col_previus > col) ? col_previus - 1 : col_previus + 1;
-					div_id = 'row-' + (row + 1) + "-col-" + col_;
+					div_id = 'row_' + (row + 1) + "_col_" + col_;
+					console.warn("div_id2: " + div_id);
 					$("#" + div_id).empty();
 				}
 				return ((row_drop - 1) == row && (col_drop -1 == col || col_drop + 1 == col) && (! $("#" + identificador).children().length > 0 ));
@@ -32,24 +35,26 @@
 		}
 
 		function aceptar(identificador, d) {
+			console.warn("identificador: " + identificador);
 			var parentDiv = d.parent().prop('id');
 			var row = parseInt(parentDiv.substr(4, 1));
 			var col = parseInt(parentDiv.substr(10, 1));
-			// console.warn(row + ", " + col);
 			var row_drop = parseInt($("#" + identificador).attr("data-row"));
 			var col_drop = parseInt($("#" + identificador).attr("data-col"));
-			console.warn(row_drop + ", " + col_drop);
+
 			if (d.hasClass( "piezas1" )) {
 				if((row_drop - 2) == row) {
 					col_previus = (col > col_drop) ? col_drop + 1 : col_drop - 1;
-					div_id = 'row-' + (row_drop - 1) + "-col-" + col_previus;
-					return ($("#"+div_id).children().hasClass("ficha2") && ! $("#" + identificador).children().length > 0 );
+					div_id = 'row_' + (row_drop - 1) + "_col_" + col_previus;
+					console.warn("div_id3: " + div_id);
+					return ($("#"+div_id).children().hasClass("piezas2") && ! $("#" + identificador).children().length > 0 );
 				}
 			} else {
 				if((row_drop + 2) == row) {
 					col_previus = (col > col_drop) ? col_drop + 1 : col_drop - 1;
-					div_id = 'row-' + (row_drop + 1) + "-col-" + col_previus;
-					return ($("#"+div_id).children().hasClass("ficha1") && ! $("#" + identificador).children().length > 0 );
+					div_id = 'row_' + (row_drop + 1) + "_col_" + col_previus;
+					console.warn("div_id4: " + div_id);
+					return ($("#"+div_id).children().hasClass("piezas1") && ! $("#" + identificador).children().length > 0 );
 				}
 				return ((row_drop + 1) == row && (col_drop -1 == col || col_drop + 1 == col) && (! $("#" + identificador).children().length > 0 ));
 			}
@@ -166,6 +171,222 @@
 					aceptar("row_3_col_8", d);
 				}
 			});
+
+			$("#row_4_col_1").droppable({
+				drop: function(event, ui) {
+					borrar("row_4_col_1", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_4_col_1", d);
+				}
+			});
+
+			$("#row_4_col_3").droppable({
+				drop: function(event, ui) {
+					borrar("row_4_col_3", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_4_col_3", d);
+				}
+			});
+
+			$("#row_4_col_5").droppable({
+				drop: function(event, ui) {
+					borrar("row_4_col_5", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_4_col_5", d);
+				}
+			});
+
+			$("#row_4_col_7").droppable({
+				drop: function(event, ui) {
+					borrar("row_4_col_7", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_4_col_7", d);
+				}
+			});
+
+			$("#row_5_col_2").droppable({
+				drop: function(event, ui) {
+					borrar("row_5_col_2", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_5_col_2", d);
+				}
+			});
+
+			$("#row_5_col_4").droppable({
+				drop: function(event, ui) {
+					borrar("row_5_col_4", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_5_col_4", d);
+				}
+			});
+
+			$("#row_5_col_6").droppable({
+				drop: function(event, ui) {
+					borrar("row_5_col_6", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_5_col_6", d);
+				}
+			});
+
+			$("#row_5_col_8").droppable({
+				drop: function(event, ui) {
+					borrar("row_5_col_8", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_5_col_8", d);
+				}
+			});
+
+			$("#row_6_col_1").droppable({
+				drop: function(event, ui) {
+					borrar("row_6_col_1", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_6_col_1", d);
+				}
+			});
+			
+			$("#row_6_col_3").droppable({
+				drop: function(event, ui) {
+					borrar("row_6_col_3", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_6_col_3", d);
+				}
+			});
+
+			$("#row_6_col_5").droppable({
+				drop: function(event, ui) {
+					borrar("row_6_col_5", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_6_col_5", d);
+				}
+			});
+
+			$("#row_6_col_7").droppable({
+				drop: function(event, ui) {
+					borrar("row_6_col_7", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_6_col_7", d);
+				}
+			});	
+
+			$("#row_7_col_2").droppable({
+				drop: function(event, ui) {
+					borrar("row_7_col_2", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_7_col_2", d);
+				}
+			});	
+
+			$("#row_7_col_4").droppable({
+				drop: function(event, ui) {
+					borrar("row_7_col_4", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_7_col_4", d);
+				}
+			});	
+
+			$("#row_7_col_6").droppable({
+				drop: function(event, ui) {
+					borrar("row_7_col_6", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_7_col_6", d);
+				}
+			});	
+
+			$("#row_7_col_8").droppable({
+				drop: function(event, ui) {
+					borrar("row_7_col_8", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_7_col_8", d);
+				}
+			});
+
+			$("#row_8_col_1").droppable({
+				drop: function(event, ui) {
+					borrar("row_8_col_1", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_8_col_1", d);
+				}
+			});
+
+			$("#row_8_col_3").droppable({
+				drop: function(event, ui) {
+					borrar("row_8_col_3", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_8_col_3", d);
+				}
+			});
+
+			$("#row_8_col_5").droppable({
+				drop: function(event, ui) {
+					borrar("row_8_col_5", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_8_col_5", d);
+				}
+			});
+
+			$("#row_8_col_7").droppable({
+				drop: function(event, ui) {
+					borrar("row_8_col_7", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_8_col_7", d);
+				}
+			});
+
+			$("#row_9_col_2").droppable({
+				drop: function(event, ui) {
+					borrar("row_9_col_2", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_9_col_2", d);
+				}
+			});
+
+			$("#row_9_col_4").droppable({
+				drop: function(event, ui) {
+					borrar("row_9_col_4", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_9_col_4", d);
+				}
+			});
+
+			$("#row_9_col_6").droppable({
+				drop: function(event, ui) {
+					borrar("row_9_col_6", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_9_col_6", d);
+				}
+			});
+
+			$("#row_9_col_8").droppable({
+				drop: function(event, ui) {
+					borrar("row_9_col_8", event, ui);
+				},
+				accept: function(d) {
+					aceptar("row_9_col_8", d);
+				}
+			});
 		});
 	</script>
 </head>
@@ -174,19 +395,19 @@
 		<div id="row_1" class="row">
 			<div class="cuadro_oscuro"></div>
 			<div id="row_1_col_2" class="cuadro_claro ui-droppable" data-row="1" data-col="2">
-				<div id="pieza1_row_1_col_2" class="piezas1"></div>
+				<div id="pieza_1_row_1_col_2" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_1_col_4" class="cuadro_claro ui-droppable" data-row="1" data-col="4">
-				<div id="pieza1_row_1_col_4" class="piezas1"></div>
+				<div id="pieza_1_row_1_col_4" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_1_col_6" class="cuadro_claro ui-droppable" data-row="1" data-col="6">
-				<div id="pieza1_row_1_col_6" class="piezas1"></div>
+				<div id="pieza_1_row_1_col_6" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_1_col_8" class="cuadro_claro ui-droppable" data-row="1" data-col="8">
-				<div id="pieza1_row_1_col_8" class="piezas1"></div>
+				<div id="pieza_1_row_1_col_8" class="piezas1"></div>
 			</div>
 		</div>
 		<br>
@@ -214,19 +435,19 @@
 		<div id="row_3" class="row">
 			<div class="cuadro_oscuro"></div>
 			<div id="row_3_col_2" class="cuadro_claro ui-droppable" data-row="3" data-col="2">
-				<div id="pieza1_row_3_col_2" class="piezas1"></div>
+				<div id="pieza_1_row_3_col_2" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_3_col_4" class="cuadro_claro ui-droppable" data-row="3" data-col="4">
-				<div id="pieza1_row_3_col_4" class="piezas1"></div>
+				<div id="pieza_1_row_3_col_4" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_3_col_6" class="cuadro_claro ui-droppable" data-row="3" data-col="6">
-				<div id="pieza1_row_3_col_6" class="piezas1"></div>
+				<div id="pieza_1_row_3_col_6" class="piezas1"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_3_col_8" class="cuadro_claro ui-droppable" data-row="3" data-col="8">
-				<div id="pieza1_row_3_col_8" class="piezas1"></div>
+				<div id="pieza_1_row_3_col_8" class="piezas1"></div>
 			</div>
 		</div>
 		<br>
@@ -270,19 +491,19 @@
 		<div id="row_7" class="row">
 			<div class="cuadro_oscuro"></div>
 			<div id="row_7_col_2" class="cuadro_claro ui-droppable" data-row="7" data-col="2">
-				<div id="pieza2_row_7_col_2" class="piezas2"></div>
+				<div id="pieza_2_row_7_col_2" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_7_col_4" class="cuadro_claro ui-droppable" data-row="7" data-col="4">
-				<div id="pieza2_row_7_col_4" class="piezas2"></div>
+				<div id="pieza_2_row_7_col_4" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_7_col_6" class="cuadro_claro ui-droppable" data-row="7" data-col="6">
-				<div id="pieza2_row_7_col_6" class="piezas2"></div>
+				<div id="pieza_2_row_7_col_6" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_7_col_8" class="cuadro_claro ui-droppable" data-row="7" data-col="8">
-				<div id="pieza2_row_7_col_8" class="piezas2"></div>
+				<div id="pieza_2_row_7_col_8" class="piezas2"></div>
 			</div>
 		</div>
 		<br>
@@ -310,19 +531,19 @@
 		<div id="row_9" class="row">
 			<div class="cuadro_oscuro"></div>
 			<div id="row_9_col_2" class="cuadro_claro ui-droppable" data-row="9" data-col="2">
-				<div id="pieza2_row_9_col_2" class="piezas2"></div>
+				<div id="pieza_2_row_9_col_2" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_9_col_4" class="cuadro_claro ui-droppable" data-row="9" data-col="4">
-				<div id="pieza2_row_9_col_4" class="piezas2"></div>
+				<div id="pieza_2_row_9_col_4" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_9_col_6" class="cuadro_claro ui-droppable" data-row="9" data-col="6">
-				<div id="pieza2_row_9_col_6" class="piezas2"></div>
+				<div id="pieza_2_row_9_col_6" class="piezas2"></div>
 			</div>
 			<div class="cuadro_oscuro"></div>
 			<div id="row_9_col_8" class="cuadro_claro ui-droppable" data-row="9" data-col="8">
-				<div id="pieza2_row_9_col_8" class="piezas2"></div>
+				<div id="pieza_2_row_9_col_8" class="piezas2"></div>
 			</div>
 		</div>
 	</div>

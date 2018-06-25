@@ -51,6 +51,7 @@ $(document).ready(function() {
 					}
 				},
 				accept: function(d) {
+					console.warn("this: " + this);
 					var parentDiv = d.parent().prop('id');
 					var row = parseInt(parentDiv.substr(4, 1));
 					var col = parseInt(parentDiv.substr(10, 1));
@@ -60,6 +61,7 @@ $(document).ready(function() {
 						if((row_drop - 2) == row) {
 							col_previus = (col > col_drop) ? col_drop + 1 : col_drop - 1;
 							div_id = 'row-' + (row_drop - 1) + "-col-" + col_previus;
+							console.warn("div_id: " + div_id);
 							return ($("#"+div_id).children().hasClass("ficha2") && ! $(this).children().length > 0 );
 						}
 						return ((row_drop - 1) == row && (col_drop -1 == col || col_drop + 1 == col) && (! $(this).children().length > 0 ));
