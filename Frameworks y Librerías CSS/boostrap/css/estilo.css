@@ -1,0 +1,25 @@
+body {
+	background-color: #F15A2D;
+}
+
+header {
+	background-color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+	.md-pst-scl {
+		position: absolute; 
+		bottom: 5px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sm-pst-scl {
+		position: static;
+		margin-bottom: 5px;
+	}
+}
+
+.menu {
+	background-color: #679E02;
+}
