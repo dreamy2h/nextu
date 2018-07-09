@@ -1,0 +1,28 @@
+body {
+	background-color: #6E8FA2;
+	color: #CADBE5;
+}
+
+header {
+	background-color: #3D626D;
+	border-radius: 5px 5px 0 0;
+}
+
+.borde-abajo {
+	border-bottom: 1px solid;
+	border-color: #CADBE5;
+}
+
+.borde-derecho {
+	border-right: 1px solid;
+	border-color: #CADBE5;
+}
+
+.menu-color {
+	background-color: #576F79;
+	/*opacity: 0.6;*/
+}
+
+.menu a {
+  color: #CADBE5;
+}
