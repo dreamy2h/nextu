@@ -1,6 +1,7 @@
 body {
 	background-color: #6E8FA2;
 	color: #CADBE5;
+	background-image: url("../imagenes/fondo.jpg");
 }
 
 header {
@@ -25,4 +26,14 @@ header {
 
 .menu a {
   color: #CADBE5;
+}
+
+.cuerpo {
+	background-color: #CADBE5;
+	color: #3D626D;
+}
+
+.transparencia {
+	/*opacity: 0.5;
+	filter:alpha(opacity=60);*/
 }
