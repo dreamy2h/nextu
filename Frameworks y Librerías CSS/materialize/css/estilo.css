@@ -1,5 +1,8 @@
 body {
 	background-color: #B5D3DB;
+	background-image: url("../imagenes/fondo.jpg");
+	background-repeat: repeat-y;
+	width: 100%;
 }
 
 .header-color {
@@ -8,4 +11,22 @@ body {
 
 .slogan-texto-color {
 	color: #DAD2C7;
+}
+
+.entrada-1 {
+	text-align: justify;
+	padding: 2%;
+}
+
+.img-entrada-1 {
+	padding: 1%;
+}
+
+.block-blanco {
+	background-color: white;
+	border-radius: 5px;
+}
+
+.margen {
+	padding: 10%;
 }
